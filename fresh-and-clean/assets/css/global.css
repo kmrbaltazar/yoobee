@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+
+/* Large Screens */
+@media (min-width: 82em) {
+  .header__logo {
+    width: 9.5em;
+  }
+}
+
+/* Smaller screens */
+@media (min-width: 62em) {
+  .header__logo {
+    width: 9.5em;
+  }
+}
+
+/* Tablets */
+@media (min-width: 43em) {
+  .header__logo {
+    width: 6em;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 43em) {
+  .header__logo {
+    width: 3.5em;
+  }
+}

@@ -1,0 +1,85 @@
+/* Forms, buttons, tables, lists */
+
+.welcome__text button {
+  color: #fff;
+  background-color: #f2a03d;
+  border: none;
+  padding: 5px;
+  text-transform: capitalize;
+}
+
+.welcome__text a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.welcome__text button:hover {
+  background-color: #41aef2;
+  font-weight: bold;
+}
+
+.welcome__image img {
+  object-fit: cover;
+  object-position: center;
+  width: 100vw;
+  height: 50vh;
+  opacity: 50%;
+}
+
+.album figure:hover {
+  opacity: 50%;
+}
+
+.about__img {
+  object-fit: cover;
+  object-position: center;
+  /* width: 50vw; */
+  max-width: 50vw;
+  opacity: 0.8;
+}
+
+.contact--input,
+.contact--textarea,
+.contact--button {
+  display: block;
+  text-transform: capitalize;
+  color: #09507c;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  text-transform: capitalize;
+}
+
+.contact--input {
+  width: 35vw;
+  height: 30px;
+  background-color: #c4ddef;
+  font-style: italic;
+  border: 1px solid #09507c;
+}
+
+.contact--textarea {
+  width: 100%;
+  height: 100px;
+  padding: 5px 10px;
+  background-color: #c4ddef;
+  font-style: italic;
+  border: 1px solid #09507c;
+}
+
+.contact--button {
+  height: 30px;
+  width: 100px;
+  margin: 20px 0 0 auto;
+  border: none;
+  background-color: #f2a03d;
+}
+
+.contact__map {
+  width: 100%;
+  height: 450px;
+  margin-top: 15px;
+  border: none;
+}
