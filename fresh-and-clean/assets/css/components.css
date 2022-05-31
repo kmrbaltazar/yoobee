@@ -1,19 +1,26 @@
 /* Forms, buttons, tables, lists */
 
-.welcome__text button {
+.welcome__text button,
+.video__button button {
   color: #fff;
   background-color: #f2a03d;
   border: none;
-  padding: 5px;
+  padding: 10px;
   text-transform: capitalize;
 }
 
-.welcome__text a {
+.welcome__text button {
+    font-size: 20px;
+}
+
+.welcome__text a,
+.video__button a {
   text-decoration: none;
   color: #fff;
 }
 
-.welcome__text button:hover {
+.welcome__text button:hover,
+.video__button button:hover {
   background-color: #41aef2;
   font-weight: bold;
 }
@@ -22,20 +29,63 @@
   object-fit: cover;
   object-position: center;
   width: 100vw;
+  max-width: 100%;
   height: 50vh;
   opacity: 50%;
 }
 
-.album figure:hover {
-  opacity: 50%;
+.album__info {
+    position: relative;
+    background: #535252;
+    height: 200px;
+    width: 200px;
+}
+
+.album__info::before,
+.album__info::after {
+    content: '';
+    position: absolute;
+    opacity: 1;
+    transition: opacity ease-out 250ms;
+}
+
+.album__img {
+    max-width: 100%;
+    display: block;
+    transition: opacity ease-out 250ms;
+}
+
+.album__info:hover .album__img {
+ opacity: 0.4;
+}
+
+.album__content {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    color: #fff;
+    opacity: 0;
+    transition: opacity ease-out 250ms;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.album__info:hover .album__content {
+    opacity: 1;
+}
+
+.album__title {
+    text-transform: capitalize;
+    font-weight: 900;
 }
 
 .about__img {
   object-fit: cover;
   object-position: center;
-  /* width: 50vw; */
-  max-width: 50vw;
-  opacity: 0.8;
+  opacity: 80%;
 }
 
 .contact--input,
@@ -50,22 +100,19 @@ label {
   display: block;
   margin-top: 15px;
   text-transform: capitalize;
+  color: #09507c;
 }
 
 .contact--input {
-  width: 35vw;
   height: 30px;
-  background-color: #c4ddef;
-  font-style: italic;
   border: 1px solid #09507c;
+  padding-left: 5px;
 }
 
 .contact--textarea {
   width: 100%;
   height: 100px;
-  padding: 5px 10px;
-  background-color: #c4ddef;
-  font-style: italic;
+  padding: 5px;
   border: 1px solid #09507c;
 }
 
@@ -79,7 +126,95 @@ label {
 
 .contact__map {
   width: 100%;
-  height: 450px;
   margin-top: 15px;
   border: none;
+  height: 250px;
+}
+
+.video__items {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.video__button {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* Large Screens */
+@media (min-width: 82em) {
+  .video__items iframe {
+    width: 560px;
+    height: 315px;
+  }
+
+  .about__img {
+    max-width: 30vw;
+  }
+
+  .contact--input {
+    width: 40vw;
+}
+}
+
+/* Smaller screens */
+@media (min-width: 62em) and (max-width: 82em) {
+  .video__items iframe {
+    width: 464px;
+    height: 261px;
+  }
+
+  .about__img {
+    max-width: 30vw;
+  }
+
+  .contact--input {
+    width: 45vw;
+}
+}
+
+/* Tablets */
+@media (min-width: 30em) and (max-width: 62em) {
+  .video__items iframe {
+    width: 464px;
+    height: 261px;
+  }
+
+  .video__items {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about__img {
+    max-width: 50vw;
+  }
+
+.contact--input {
+    width: 40vw;
+}
+}
+
+/* Mobile phones */
+@media (max-width: 30em) {
+  .video__items iframe {
+    width: 272px;
+    height: 153px;
+  }
+
+  .video__items {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .about__img {
+    max-width: 75vw;
+  }
+
+  .contact--input {
+      width: 100%;
+  }
 }
