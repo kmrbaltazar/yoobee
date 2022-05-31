@@ -5,6 +5,7 @@
   color: #fff;
   background-color: #f2a03d;
   border: none;
+  border-radius: 5px;
   padding: 10px;
   text-transform: capitalize;
 }
@@ -20,7 +21,8 @@
 }
 
 .welcome__text button:hover,
-.video__button button:hover {
+.video__button button:hover,
+.contact__button:hover {
   background-color: #41aef2;
   font-weight: bold;
 }
@@ -86,6 +88,7 @@
   object-fit: cover;
   object-position: center;
   opacity: 80%;
+  border-radius: 10px;
 }
 
 .contact--input,
@@ -121,7 +124,9 @@ label {
   width: 100px;
   margin: 20px 0 0 auto;
   border: none;
+  border-radius: 5px;
   background-color: #f2a03d;
+  color: #fff;
 }
 
 .contact__map {

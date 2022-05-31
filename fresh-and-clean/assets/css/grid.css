@@ -60,6 +60,7 @@ body {
   background-color: #c4ddef;
   padding: 50px 40px;
   align-items: center;
+  border-radius: 10px;
 }
 
 .contact__items {
