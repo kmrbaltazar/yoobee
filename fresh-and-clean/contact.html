@@ -29,8 +29,8 @@
       sizes="16x16"
       href="./assets/images/favicon_fresh-and-clean/favicon-16x16.png"
     />
-    <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="./assets/JS/main.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -85,7 +85,7 @@
               type="text"
               id="subject"
               placeholder="nature of inquiry"
-              class="contact--input"
+              class="contact--input contact--cap"
             />
             <label for="message">message</label>
             <textarea
@@ -96,11 +96,23 @@
             <input type="submit" value="send" class="contact--button" />
           </form>
         </div>
-        <div class="contact__items">
+        <div class="contact__iframe">
           <iframe
             src="https://www.openstreetmap.org/export/embed.html?bbox=172.6335382461548%2C-43.539402650434894%2C172.64413833618167%2C-43.51899145138126&amp;layer=mapnik&amp;marker=-43.529197914319205%2C172.6388382911682"
             class="contact__map"
           ></iframe>
+        </div>
+        <div class="contact__js">
+          <div class="contact__js--title">
+            <h3>javascript project</h3>
+            <br />
+            <p>tell us what you think of our service:</p>
+          </div>
+          <input type="text" id="input" placeholder="item" />
+          <button id="button">add</button>
+          <ul id="list">
+            <li>amazing work!</li>
+          </ul>
         </div>
       </div>
     </main>

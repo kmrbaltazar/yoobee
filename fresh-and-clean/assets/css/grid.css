@@ -51,7 +51,6 @@ body {
 .about,
 .contact__row {
   display: grid;
-  grid-template-columns: min-content 1fr;
   gap: 40px;
   max-width: 85vw;
 }
@@ -61,10 +60,34 @@ body {
   padding: 50px 40px;
   align-items: center;
   border-radius: 10px;
+  grid-template-columns: min-content 1fr;
+}
+
+.contact__row {
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 5px;
 }
 
 .contact__items {
-  justify-content: center;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.contact__iframe {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.contact__js {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 footer {
